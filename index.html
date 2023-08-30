@@ -10,14 +10,32 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
   }
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .logo1 {
+    margin-right: 6cm; /* Add this line to move the first logo to the right */
+  }
+
   .content {
     text-align: center;
+    margin-top: 30px;
   }
 
   .button {
@@ -31,10 +49,13 @@
 </style>
 </head>
 <body>
+<div class="header">
+  <img class="logo logo1" src="path-to-your-first-image.jpg" alt="Logo 1">
+</div>
 <div class="content">
-  <h2>Welcome to the Fullscreen Google Form</h2>
-  <p>Click the button below and then press F11 to view the form in full-screen mode.</p>
-  <a class="button" href="https://your-google-form-link-here" target="_blank">Open Google Form</a>
+  <h2>Budge Budge Refineries Ltd</h2>
+  <p>Please click the button below to proceed with your exam.</p>
+  <a class="button" href="https://forms.gle/y6d7pQZhJidgvsUC9" target="_blank">Test Link</a>
 </div>
 </body>
 </html>
