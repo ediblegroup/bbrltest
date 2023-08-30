@@ -5,58 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fullscreen Google Form</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 60px;
-  }
-
-  .logo {
-    max-width: 100px;
-    height: auto;
-  }
-
-  .logo1 {
-    margin-right: 2cm; /* Add this line to move the first logo to the right */
-  }
-
-  .content {
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  /* Your existing CSS styles */
 </style>
 </head>
 <body>
 <div class="header">
   <img class="logo logo1" src="https://www.ediblegroup.in/wp-content/uploads/2019/08/FINAL-BOLD-2-Copy-2-Copy.png" alt="Logo 1">
-  
 </div>
 <div class="content">
   <h2>Budge Budge Refineries Ltd</h2>
   <p>Please click the button below to proceed with your exam.</p>
-  <a class="button" href="https://forms.gle/y6d7pQZhJidgvsUC9" target="_blank">Test Link</a>
+  <a class="button" href="#" id="testLink">Test Link</a> <!-- Changed href to "#" and added an ID -->
 </div>
+<script>
+  document.getElementById('testLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    loadGoogleForm(); // Call the function to load the Google Form
+  });
+
+  function loadGoogleForm() {
+    var contentContainer = document.querySelector('.content');
+    contentContainer.innerHTML = `
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4lhfOu60nNwvDJ3oHSBFXmPsYXjISU5DMgfVq9t3V67-NRQ/viewform" width="900" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      <p>Other content on your webpage</p>
+    `;
+  }
+</script>
 </body>
 </html>
