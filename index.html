@@ -5,7 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fullscreen Google Form</title>
 <style>
-  /* Your existing CSS styles */
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Set your desired background color */
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Set your desired content background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
 </style>
 </head>
 <body>
@@ -15,12 +56,12 @@
 <div class="content">
   <h2>Budge Budge Refineries Ltd</h2>
   <p>Please click the button below to proceed with your exam.</p>
-  <a class="button" href="#" id="testLink">Test Link</a> <!-- Changed href to "#" and added an ID -->
+  <a class="button" href="#" id="testLink">Test Link</a>
 </div>
 <script>
   document.getElementById('testLink').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default behavior of the link
-    loadGoogleForm(); // Call the function to load the Google Form
+    event.preventDefault();
+    loadGoogleForm();
   });
 
   function loadGoogleForm() {
@@ -33,3 +74,4 @@
 </script>
 </body>
 </html>
+
